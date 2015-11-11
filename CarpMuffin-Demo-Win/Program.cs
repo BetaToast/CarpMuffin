@@ -1,20 +1,19 @@
 ﻿using System;
+using CarpMuffin.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace CarpMuffin_Demo_Win
 {
 #if WINDOWS || LINUX
-    /// <summary>
-    /// The main class.
-    /// </summary>
     public static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        public static Camera2D Camera { get; set; }
+        public static Vector2 TileSize => new Vector2(32f, 32f);
+
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+            using (var game = new WindowsDemoGame())
                 game.Run();
         }
     }

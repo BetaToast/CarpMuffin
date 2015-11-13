@@ -31,15 +31,9 @@ namespace CarpMuffin.UserInterfaces.Controls
             Tint = Color.White;
         }
 
-        public virtual void Update(GameTime gameTime)
-        {
-            throw new System.NotImplementedException();
-        }
+        public virtual void Update(GameTime gameTime) { }
 
-        public virtual void UpdateInput(InputManager input)
-        {
-            throw new System.NotImplementedException();
-        }
+        public virtual void UpdateInput(InputManager input) { }
 
         public virtual void Draw(GameTime gameTime)
         {

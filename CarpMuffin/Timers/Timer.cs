@@ -26,6 +26,8 @@ namespace CarpMuffin.Timers
 
         public void Update(GameTime gameTime)
         {
+            if (!IsEnabled) return;
+
             _elapsed += gameTime.ElapsedGameTime.TotalMilliseconds;
 
             OnTick?.Invoke();
@@ -34,6 +36,16 @@ namespace CarpMuffin.Timers
             IsDisposed = true;
             IsEnabled = false;
             OnComplete?.Invoke(this);
+        }
+
+        public void Start()
+        {
+            IsEnabled = true;
+        }
+
+        public void Stop()
+        {
+            IsEnabled = false;
         }
 
         public void Reset()

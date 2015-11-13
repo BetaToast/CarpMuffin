@@ -3,6 +3,7 @@ using CarpMuffin.Graphics;
 using CarpMuffin.Input;
 using CarpMuffin.Messages;
 using CarpMuffin.Scenes;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TextureCollection = CarpMuffin.Collections.TextureCollection;
 

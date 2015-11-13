@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Screens\ScreenNames.cs" />
     <Compile Include="Screens\Splash\CarpMuffinSplashScreen.cs" />
+    <Compile Include="Screens\Title\TitleScreen.cs" />
     <Compile Include="WindowsDemoGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,9 +74,7 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screens\Title\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

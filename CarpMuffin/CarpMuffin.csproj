@@ -48,6 +48,7 @@
     <Compile Include="Animations\Animation.cs" />
     <Compile Include="Animations\AnimationCollection.cs" />
     <Compile Include="Animations\AnimationEnumerator.cs" />
+    <Compile Include="Animations\TransitionState.cs" />
     <Compile Include="Animations\Tween.cs" />
     <Compile Include="Collections\FontCollection.cs" />
     <Compile Include="Collections\ResourceCollection.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="UserInterfaces\Controls\Part.cs" />
     <Compile Include="UserInterfaces\Controls\ProgressBar.cs" />
     <Compile Include="UserInterfaces\Controls\RadioButton.cs" />
+    <Compile Include="UserInterfaces\Controls\ScreenOverlay.cs" />
     <Compile Include="UserInterfaces\Controls\States\ButtonState.cs" />
     <Compile Include="UserInterfaces\UserInterfacePartNames.cs" />
     <Compile Include="UserInterfaces\UserInterfaceScreen.cs" />

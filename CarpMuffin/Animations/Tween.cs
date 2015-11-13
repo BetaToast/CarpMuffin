@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 
 namespace CarpMuffin.Animations
 {
@@ -15,6 +16,8 @@ namespace CarpMuffin.Animations
         public bool IsRunning { get; private set; }
         public bool IsRepeating { get; set; }
         public bool SinousRepeating { get; set; }
+
+        public Action<Tween> OnComplete { get; set; }
 
         public Tween()
         {
@@ -69,7 +72,11 @@ namespace CarpMuffin.Animations
             Value = (Time / Duration) * Maximum;
             Value = MathHelper.Clamp((float)Value, (float)Minimum, (float)Maximum);
 
-            if (Time >= Duration) Stop();
+            if (Time >= Duration)
+            {
+                Stop();
+                OnComplete?.Invoke(this);
+            }
             if (IsRepeating && Time >= Duration)
             {
                 if (!SinousRepeating) Reset();
@@ -77,6 +84,7 @@ namespace CarpMuffin.Animations
                 {
                     _dir = _dir == 0 ? 1 : 0;
                 }
+                OnComplete?.Invoke(this);
                 Start();
             }
             else if (IsRepeating && Time < 0)
@@ -86,6 +94,7 @@ namespace CarpMuffin.Animations
                 {
                     _dir = _dir == 0 ? 1 : 0;
                 }
+                OnComplete?.Invoke(this);
                 Start();
             }
         }

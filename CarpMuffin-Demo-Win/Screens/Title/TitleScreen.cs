@@ -1,5 +1,6 @@
 ﻿using CarpMuffin.UserInterfaces;
 using CarpMuffin.UserInterfaces.Controls;
+using CarpMuffin_Demo_Win.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -44,10 +45,10 @@ namespace CarpMuffin_Demo_Win.Screens.Title
             var demoButton1 = menuPanel.AddChild<Button>();
             demoButton1.Position = new Vector2(30f, 100f);
             demoButton1.Size = new Vector2(204f, 26f);
-            demoButton1.Text = "Demo 1";
+            demoButton1.Text = "Space Invaders";
             demoButton1.OnClick = b =>
             {
-                
+                Engine.Scenes.ChangeScene(SceneNames.Demo1);
             };
 
             var demoButton2 = menuPanel.AddChild<Button>();

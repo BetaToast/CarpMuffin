@@ -2,6 +2,7 @@
 using CarpMuffin.Graphics;
 using CarpMuffin_Demo_Win.Scenes;
 using CarpMuffin_Demo_Win.Screens;
+using CarpMuffin_Demo_Win.Screens.Demo1;
 using CarpMuffin_Demo_Win.Screens.Splash;
 using CarpMuffin_Demo_Win.Screens.Title;
 
@@ -23,6 +24,9 @@ namespace CarpMuffin_Demo_Win
 
             var titleScene = Scenes.Add<TitleScene>(SceneNames.Title);
             titleScene.AddScreen<TitleScreen>(ScreenNames.TitleScreen).PushToScene(ScreenNames.TitleScreen);
+
+            var demo1Scene = Scenes.Add<Demo1Scene>(SceneNames.Demo1);
+            demo1Scene.AddScreen<Demo1Screen>(ScreenNames.Demo1).PushToScene(ScreenNames.Demo1);
 
             Scenes.ChangeScene(SceneNames.Splash);
         }

@@ -51,7 +51,7 @@ namespace CarpMuffin_Demo_Win.Screens.Splash
                 }
             };
 
-            _logoTexture = Textures.Load("gfx/carpmuffin-logo");
+            _logoTexture = Textures.Load(TextureNames.CarpMuffinLogo);
             _whitePixel = Engine.CreateWhitePixel();
         }
 

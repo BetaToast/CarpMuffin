@@ -42,8 +42,15 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Demo1\Bullet.cs" />
+    <Compile Include="Demo1\Enemy.cs" />
+    <Compile Include="Demo1\Meteor.cs" />
+    <Compile Include="Demo1\Player.cs" />
+    <Compile Include="Scenes\Demo1Scene.cs" />
+    <Compile Include="Screens\Demo1\Demo1Screen.cs" />
     <Compile Include="Screens\ScreenNames.cs" />
     <Compile Include="Screens\Splash\CarpMuffinSplashScreen.cs" />
+    <Compile Include="Screens\TextureNames.cs" />
     <Compile Include="Screens\Title\TitleScreen.cs" />
     <Compile Include="WindowsDemoGame.cs" />
     <Compile Include="Program.cs" />

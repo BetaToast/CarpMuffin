@@ -4,5 +4,6 @@
     {
         public static string Splash = "SplashScene";
         public static string Title = "TitleScene";
+        public static string Demo1 = "Demo1Scene";
     }
 }

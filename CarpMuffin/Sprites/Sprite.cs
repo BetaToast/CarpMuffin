@@ -49,8 +49,16 @@ namespace CarpMuffin.Sprites
             Initialize();
         }
 
-        public void Initialize()
+        public Sprite(Texture2D texture)
         {
+            Size = new Vector2(texture.Width, texture.Height);
+            SpriteSheet = new SpriteSheet(texture, Size);
+            Initialize();
+        }
+
+        public virtual void Initialize()
+        {
+            IsEnabled = true;
             IsVisible = true;
             Position = Vector2.Zero;
             Index = 0;
@@ -64,7 +72,7 @@ namespace CarpMuffin.Sprites
 
         public virtual void Update(GameTime gameTime)
         {
-            //if (!IsEnabled) return;
+            if (!IsEnabled) return;
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)

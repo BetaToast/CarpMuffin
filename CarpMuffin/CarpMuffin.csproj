@@ -50,6 +50,8 @@
     <Compile Include="Animations\AnimationEnumerator.cs" />
     <Compile Include="Animations\TransitionState.cs" />
     <Compile Include="Animations\Tween.cs" />
+    <Compile Include="Audio\SongCollection.cs" />
+    <Compile Include="Audio\SoundEffectCollection.cs" />
     <Compile Include="Collections\FontCollection.cs" />
     <Compile Include="Collections\ResourceCollection.cs" />
     <Compile Include="Collections\ResourceEnumerator.cs" />
@@ -115,9 +117,7 @@
     <Compile Include="UserInterfaces\UserInterfaceScreen.cs" />
     <Compile Include="UserInterfaces\UserInterfaceSkin.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Audio\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

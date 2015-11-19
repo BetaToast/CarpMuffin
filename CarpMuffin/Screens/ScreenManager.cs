@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CarpMuffin.Audio;
 using CarpMuffin.Input;
 using CarpMuffin.Managers;
 using CarpMuffin.Messages;
@@ -37,6 +38,8 @@ namespace CarpMuffin.Screens
             item.SpriteBatch = new SpriteBatch(Engine.Instance.GraphicsDevice);
             item.SpriteBatch.Name = $"SpriteBatch_{item.GetType().FullName}";
             item.Textures = new Collections.TextureCollection(_content);
+            item.Songs = new SongCollection(_content);
+            item.SoundEffects = new SoundEffectCollection(_content);
             item.Input = new InputManager();
             item.Content = _content;
             item.LoadContent(_content);

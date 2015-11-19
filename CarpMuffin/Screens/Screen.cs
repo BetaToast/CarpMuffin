@@ -1,4 +1,5 @@
 ﻿using System;
+using CarpMuffin.Audio;
 using CarpMuffin.Graphics;
 using CarpMuffin.Input;
 using CarpMuffin.Messages;
@@ -26,6 +27,8 @@ namespace CarpMuffin.Screens
         public Camera2D Camera { get; set; }
         public SpriteBatch SpriteBatch { get; set; }
         public IScene ParentScene { get; set; }
+        public SongCollection Songs { get; set; }
+        public SoundEffectCollection SoundEffects { get; set; }
 
         public Engine Engine => Engine.Instance;
 
@@ -35,6 +38,8 @@ namespace CarpMuffin.Screens
             IsVisible = true;
             Textures = new TextureCollection();
             Camera = new Camera2D();
+            Songs = new SongCollection();
+            SoundEffects = new SoundEffectCollection();
         }
 
         public abstract void Update(GameTime gameTime);
